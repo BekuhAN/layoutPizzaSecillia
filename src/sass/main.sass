@@ -87,21 +87,97 @@ section
 		font-weight: bold
 		font-family: $sub-font
 		margin: 30px 0px 20px
- 		position: relative
-		z-index: 2
+		position: relative
+		span
+			position: relative
+			z-index: 2
 		&::before
 			content: attr(title)
 			display: block
 			font-size: 80px
 			color: #dddddd
 			position: absolute
-			top: 0
-			z-index: -1
+			bottom: 0
+			z-index: 1
+			line-height: 1.4
+		&.middle
+			text-align: center
+			&::before
+				left: 50%
+				transform: translateX(-50%)
 	.about-description .btn
 		margin-top: 40px
 	.about-img
+		display: flex
+		justify-content: center
+		align-items: center
 		img
 			width: 100%
+	
+	&#boffer
+		background: url(../img/section-bg.jpg)
+		background-size: cover
+		background-attachment: fixed
+		background-position: center
+		text-align: center
+		.offer-description
+			font-size: 36px
+			font-family: $sub-font
+			font-weight: bold
+			color: #ffffff
+			margin-bottom: 30px
+			span
+				display: block
+				font-size: 60px
+				text-transform: uppercase
+				line-height: 1.75
+		.btn
+			margin: 0px auto
+	
+	&#bdelivery
+		background: url(../img/delivery-bg.jpg)
+		background-position: top
+		background-size: cover 
+		form
+			margin-top: 30px
+			.form-item
+				border: 1px solid #cccccc
+				border-radius: 50px
+				width: 45%
+				margin-right: 4.6%
+				height: 50px
+				margin-bottom: 2.3%
+				outline: none
+				transition: .2s
+				padding-left: 20px
+				&:focus
+					border-color: #444444
+				&::placeholder
+					color: #aaaaaa
+				&.full
+					width: 95%
+			textarea
+				padding-top: 10px
+				min-height: 100px
+				max-height: 100px
+				border-radius: 25px !important
+			.btn
+				border: none
+				width: 95%
+				margin-right: 5%
+				transition: .2s
+				cursor: pointer
+
+	&#bmenu
+		background: url(../img/menu-bg.jpg)
+		background-position: top
+		background-size: cover
+		.section-title
+			color: #ffffff
+			&::before
+				color: #b78040
+				opacity: .6
+		
 /*==========  user style  ==========*/
 
 
